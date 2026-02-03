@@ -2,14 +2,15 @@ package main
 
 import (
 	"log"
-	"lsm-tree-go/memtable"
-	"lsm-tree-go/sstable"
-	"lsm-tree-go/wal"
 	"os"
 	"path/filepath"
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/bilalabdelkadir/go-lsm-tree/memtable"
+	"github.com/bilalabdelkadir/go-lsm-tree/sstable"
+	"github.com/bilalabdelkadir/go-lsm-tree/wal"
 )
 
 func ReplayWal(m *memtable.Memtable, w *wal.Wal) error {
